@@ -23,12 +23,12 @@ class GrowlogDay extends Model
   //imagenes del dia
   public function images()
   {
-      return $this->hasMany('App\Models\Growlogs\GrowlogDayImage');
+      return $this->hasMany('App\Models\Growlogs\GrowlogDays\GrowlogDayImage');
   }
   //textos del dia
   public function texts()
   {
-      return $this->hasMany('App\Models\Growlogs\GrowlogDayText');
+      return $this->hasMany('App\Models\Growlogs\GrowlogDays\GrowlogDayText');
   }
   //etapa del dia
   public function stage()

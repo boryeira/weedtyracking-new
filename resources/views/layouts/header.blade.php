@@ -2,7 +2,9 @@
 <!-- Header -->
 
 <header class="header" id="site-header">
-
+  <div class="page-title">
+  		<h6></h6>
+  	</div>
   <div class="header-content-wrapper">
     <form class="search-bar w-search notification-list friend-requests">
       <div class="form-group with-button is-empty">
@@ -14,7 +16,7 @@
     </form>
 
     <div class="control-block">
-      {{-- @if(!Auth::guest())
+      @if(!Auth::guest())
       <div class="author-page author vcard  more" >
         <div class="author-thumb">
           <img   @if(Auth::user()->avatar!=null) src="{{Cloudder::show(Auth::user()->avatar, ["width" =>124, "height" =>124, "crop"=>"fill", "format"=>"jpg","secure" => true])}}" @else src="{{url('/img/user.png')}}"@endif width="36" heght="36" class="avatar">
@@ -27,7 +29,7 @@
 
               <ul class="account-settings">
                 <li>
-                  <a href="{{url('/user/'.Auth::user()->slug())}}">
+                  <a href="{{url('/user/'.Auth::user()->id)}}">
                     <span class="fa fa-user"></span>
                     <span>Perfil</span>
                   </a>
@@ -56,13 +58,13 @@
           <span class="author-subtitle"></span>
         </a>
       </div>
-      @else --}}
+      @else
       <ul class="inline-items">
         <li><a href="{{ route('login') }}">Iniciar sesión</a></li>
         <li> o </li>
         <li><a href="{{ route('register') }}">Registrarse</a></li>
       </ul>
-      {{-- @endif --}}
+      @endif
 
     </div>
   </div>

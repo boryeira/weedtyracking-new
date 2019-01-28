@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'Growlogs\GrowlogController@index')->name('home');
+
+Route::resource('/growlogs', 'Growlogs\GrowlogController'); //CRUDS growlog
+
+Route::prefix('/growlogs/{growlog}/')->group( function (){
+  Route::resource('days', 'Growlogs\GrowlogDayController'); //CRUDS growlog days
+  Route::resource('growlogstages', 'Growlogs\GrowlogStageController'); //actualizar  estapas
+});
