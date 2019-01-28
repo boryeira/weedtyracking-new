@@ -45,11 +45,11 @@
 
                   </select>
                 </div>
-                {{--  /end selector de imagenes para seguimiento de planta  --}}
+                {{--  /end selector de imagenes para seguimiento de planta
                 <div id="track_form">
 
                     <p class="alert alert-warning " id="plant_warning_resp" style="margin-bottom: 10px">Si no escojes una planta se considerara como un seguimiento rapido o ve a <a href="{{url('/user/'.Auth::user()->slug().'/plants')}}">Tus plantas y crea una</a></p>
-                    {{--  selector de imagenes para seguimiento de planta --}}
+                    {{--  selector de imagenes para seguimiento de planta
 
                     <div class="photo-album-item create-album " id="image_button" style="min-height:80px !important;display: block;margin-bottom: 10px" >
                         <a  class="full-block ">
@@ -69,7 +69,7 @@
                           </div>
                         </a>
                     </div>
-                    {{--  /end selector de imagenes para seguimiento de planta  --}}
+                    {{--  /end selector de imagenes para seguimiento de planta
 
 
                     <div id="image_inputs">
