@@ -30,8 +30,13 @@
   <script src="{{ asset('js/app.js') }}"></script>
   {{-- extras --}}
   <script src="{{ asset('js/perfect-scrollbar.js') }}"></script>
+  <script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
   {{-- template main --}}
   <script src="{{ asset('js/main.js') }}"></script>
+  {{-- in page scripts --}}
+  @yield('script')
+
+
 
 </body>
 

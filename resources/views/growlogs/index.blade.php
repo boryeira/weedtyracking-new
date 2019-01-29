@@ -38,13 +38,15 @@
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
               <div class="clients-grid">
-                  <div class="row sorting-container" id="clients-grid-1" data-layout="masonry">
+                  <div class="row sorting-container grid" id="clients-grid-1" >
 
                           @foreach($growlogDays as $day)
 
 
                                   <!-- tracking-feed  -->
-                                  @include('growlogs.days.card', ['day' => $day, 'page'=>'home'])
+
+                                    @include('growlogs.days.card', ['day' => $day, 'page'=>'home'])
+
                                   <!-- ... end tracking-feed  -->
 
                                   {{-- <!-- comment-popup  -->
@@ -54,20 +56,31 @@
 
                           @endforeach
 
-                      
+
 
                   </div>
 
               </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 align-center padding80">
-              <a class="btn btn-primary text-center" href="{{$growlogDays->nextPageUrl()}}"> Cargar mas seguimientos</a>
-          </div>
+
+        </div>
       </div>
-  </div>
 
 
 
+@endsection
+
+@section('script')
+
+  <script defer>
+  $( document ).ready(function() {
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+    });
+  });
 
 
+  </script>
 @endsection
