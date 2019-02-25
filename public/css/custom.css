@@ -77,3 +77,7 @@ span .play-video
 .modal-dialog {
 	margin: 10px auto !important;
 }
+
+select {
+	padding: 7px !important;
+}

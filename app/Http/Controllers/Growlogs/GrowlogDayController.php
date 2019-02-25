@@ -7,6 +7,8 @@ use App\Models\Growlogs\GrowlogDays\GrowlogDay;
 use App\Models\Growlogs\GrowlogDays\GrowlogDayText;
 use App\Models\Growlogs\GrowlogDays\GrowlogDayImage;
 use App\Models\Growlogs\Growlog;
+
+use App\Http\Requests\Growlogs\DayRequest;
 use Illuminate\Http\Request;
 use Session;
 use Storage;
@@ -40,9 +42,10 @@ class GrowlogDayController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Growlog $growlog )
+    public function store(DayRequest $request, Growlog $growlog )
     {
-      //dd($request->date);
+
+      dd($request->all());
         $growlogDay = new GrowlogDay;
         $growlogDay->growlog_id = $growlog->id;
         $growlogDay->date = Carbon::createFromFormat('d/m/Y', $request->date);
@@ -60,7 +63,6 @@ class GrowlogDayController extends Controller
               $growlogDayImage = new GrowlogDayImage;
               $growlogDayImage->growlog_day_id = $growlogDay->id;
               $growlogDayImage->raw = $raw;
-              $growlogDayImage->link = $raw;
               $growlogDayImage->save();
             }
           }

@@ -27,4 +27,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function growlogs()
+    {
+        return $this->hasMany('App\Models\Growlogs\Growlog');
+    }
+    public function actives()
+    {
+        return $this->hasMany('App\Models\Growlogs\Growlog')->where('stage_id','<=',3);
+    }
+
+    public function harvested()
+    {
+        return $this->hasMany('App\Models\Growlogs\Growlog')->where('stage_id',4);
+    }
 }

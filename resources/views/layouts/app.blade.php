@@ -19,10 +19,12 @@
 
 </head>
 <body>
-  @include('layouts.left-sidebar')
-  @include('layouts.right-sidebar')
-  @include('layouts.header')
+
   <div id="app" style="">
+      @include('layouts.left-sidebar')
+      @include('layouts.right-sidebar')
+      @include('layouts.header')
+
       @yield('content')
   </div>
 
@@ -33,6 +35,7 @@
   <script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
   {{-- template main --}}
   <script src="{{ asset('js/main.js') }}"></script>
+
   {{-- in page scripts --}}
   @yield('script')
 

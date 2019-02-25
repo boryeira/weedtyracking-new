@@ -62,7 +62,9 @@
 
               </div>
           </div>
-
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 align-center padding80">
+              <a class="btn btn-primary text-center" href="{{$growlogDays->nextPageUrl()}}"> Cargar mas seguimientos</a>
+          </div>
         </div>
       </div>
 
@@ -79,8 +81,7 @@
         columnWidth: '.grid-sizer',
         percentPosition: true,
     });
+    $('.grid').masonry('reloadItems');  
   });
-
-
   </script>
 @endsection

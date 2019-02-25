@@ -54,7 +54,8 @@ class GrowlogController extends Controller
     public function show(Growlog $growlog)
     {
 
-      return view('growlogs.show')->with('growlog',$growlog);
+      $days = $growlog->days()->paginate(5);
+      return view('growlogs.show')->with('growlog',$growlog)->with('days',$days);
     }
 
     /**
