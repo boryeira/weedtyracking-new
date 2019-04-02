@@ -29,7 +29,7 @@ class GrowlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('growlogs.create');
     }
 
     /**

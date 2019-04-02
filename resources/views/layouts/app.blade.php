@@ -22,7 +22,7 @@
 
   <div id="app" style="">
       @include('layouts.left-sidebar')
-      @include('layouts.right-sidebar')
+      @yield('right-sidebar')
       @include('layouts.header')
 
       @yield('content')

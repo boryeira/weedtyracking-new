@@ -31,10 +31,25 @@ class GrowlogDayController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+     public function create(Request $request,Growlog $growlog )
+     {
+
+       if($request->date){
+
+         $date = new Carbon($request->date);
+       } else {
+         $date = new Carbon();
+       }
+
+       $day = $growlog->days()->where('date',$date)->first();
+       if($day){
+         return view('growlogs.days.edit')->with('growlog',$growlog)->with('date',$date);
+       } else {
+         return view('growlogs.days.create')->with('growlog',$growlog)->with('date',$date);
+       }
+
+
+     }
 
     /**
      * Store a newly created resource in storage.

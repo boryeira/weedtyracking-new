@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+
+@section('right-sidebar')
+  @include('layouts.right-sidebar',['action'=>'growlog-create'])
+@endsection
+
+
 @section('content')
 
   @if(Auth::guest())
@@ -81,7 +87,7 @@
         columnWidth: '.grid-sizer',
         percentPosition: true,
     });
-    $('.grid').masonry('reloadItems');  
+    $('#clients-grid-1').masonry('reloadItems');
   });
   </script>
 @endsection

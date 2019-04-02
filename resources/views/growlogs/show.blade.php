@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('right-sidebar')
+  @include('layouts.right-sidebar',['action'=>'day-create','growlog'=>$growlog])
+@endsection
+
 @section('content')
 <div class="container ">
 
