@@ -15,9 +15,9 @@
                       <h1>WEEDTRACKING 2.0</h1>
                       <h2>Comunidad de cultivadores cannabicos!</h2>
                       <h5 class="text-center">Has seguimiento a tus plantas y mejora en cada cosecha.</h5>
-                      <a class="btn btn-grey btn-lg" style="margin-top: 40px; " href="{{url('login')}}">Iniciar sesión</a>
+                      {{-- <a class="btn btn-grey btn-lg" style="margin-top: 40px; " href="{{url('login')}}">Iniciar sesión</a>
                       <p class="text-center"><a class="h6 author-name" href="{{url('/register')}}"><strong>o registrate</strong></a></p>
-                  </div>
+                  </div> --}}
               </div>
           </div>
       </div>

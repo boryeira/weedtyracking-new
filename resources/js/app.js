@@ -22,7 +22,8 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
 
   // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
   //
-  // Vue.component('add-media', require('./components/growlogs/days/add-media.vue').default);
+//Vue.component('add-media', require('./components/growlogs/days/add-media.vue').default);
+Vue.component('day-images', require('./components/growlogs/days/images.vue').default);
 
 import BootstrapVue from 'bootstrap-vue';
 // import 'bootstrap/dist/css/bootstrap.css';

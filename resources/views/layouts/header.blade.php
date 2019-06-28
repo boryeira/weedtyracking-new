@@ -59,11 +59,11 @@
         </a>
       </div>
       @else
-      <ul class="inline-items">
+      {{-- <ul class="inline-items">
         <li><a href="{{ route('login') }}">Iniciar sesión</a></li>
         <li> o </li>
         <li><a href="{{ route('register') }}">Registrarse</a></li>
-      </ul>
+      </ul> --}}
       @endif
 
     </div>

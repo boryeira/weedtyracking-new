@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('right-sidebar')
+  @include('layouts.right-sidebar',['action'=>'growlog-date'])
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -33,7 +37,7 @@
       </div>
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
         <div class="ui-block">
-          
+
         </div>
       </div>
     </div>

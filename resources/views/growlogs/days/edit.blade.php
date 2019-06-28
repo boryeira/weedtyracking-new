@@ -33,7 +33,7 @@
       </div>
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
         <div class="ui-block">
-
+<day-images></day-images>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "jrm2k6/cloudder": "^0.6.0",
         "laravel/framework": "5.7.*",
+        "laravel/passport": "^7.3",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.7"
     },

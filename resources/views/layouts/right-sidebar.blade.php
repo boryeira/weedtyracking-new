@@ -8,6 +8,8 @@
     </div>
     @if($action=='growlog-create')<a  class="olympus-chat inline-items  fa fa-plus" href="{{route('growlogs.create')}}" style="color:white; font-size: 21px;text-decoration: none;"  ></a>@endif
     @if($action=='day-create')<a  class="olympus-chat inline-items  fa fa-camera" href="{{route('days.create',['growlog'=>$growlog->id])}}" style="color:white; font-size: 21px;text-decoration: none;"  ></a>@endif
+    @if($action=='growlog-date')<a  class="olympus-chat inline-items  fa fa-calendar" href="{{route('growlogs.create')}}" style="color:white; font-size: 21px;text-decoration: none;"  ></a>@endif
+
   </div>
 
 
